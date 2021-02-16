@@ -1,0 +1,1851 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+<meta content="origin-when-cross-origin" name="referrer" />
+
+<link rel="dns-prefetch" href="//s3.envato.com" />
+
+
+<script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"fcf8d519de","applicationID":"13909","transactionName":"NTU0DRQNDwshOmISBA8zNB5JAQsCJyMiBQVZOSgcBxYGOCUrLh8EGC4=","queueTime":1,"applicationTime":61,"agent":"","atts":"DXgvW1wZQRQtPChSS1QOMhwLByUINi0+BFNaeCgcEAsQDismb0pTR288TlVXAFVmNTA="}</script>
+<script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fcf8d519de",applicationID:"13909"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+
+<title>Secure Checkout | ThemeForest</title>
+
+<meta name="description" content="The #1 marketplace for premium website templates, including themes for WordPress, Magento, Drupal, Joomla, and more.  Create a website, fast." />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-precomposed.png" />
+
+  <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/core/index-6e294e9c28580b492d27bcaaaada9a0076a7fc2dff6bc9df9de894ce02be4c1c.css" />
+  <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/pages/buying/index-d5ba481f9a10261cff8d7414161c8e4d43a5e52006eee9b61b4648715d15d88a.css" />
+
+<link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/css/cookiebot.css" />
+
+
+<meta name="theme-color" content="#333333">
+
+  <meta name="yandex-verification" content="58faa6ff34c071e6" />
+  <meta name="baidu-site-verification" content="x0xoFSsC7y" />
+
+<link rel="canonical" href="https://themeforest.net/checkout/71255149/create_account" />
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "ThemeForest",
+  "url": "https://themeforest.net"
+}
+</script>
+
+
+
+
+
+
+<script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">
+//<![CDATA[
+  window.dataLayer = window.dataLayer || [];
+
+//]]>
+</script>
+
+      <meta property="og:title" content="Secure Checkout | ThemeForest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://themeforest.net/checkout/71255149/create_account" />
+  <meta property="og:image" content="https://public-assets.envato-static.com/images/logos/marketplaces/200px/ThemeForest.png" />
+  <meta property="og:description" content="The #1 marketplace for premium website templates, including themes for WordPress, Magento, Drupal, Joomla, and more.  Create a website, fast." />
+  <meta property="og:site_name" content="ThemeForest" />
+  <meta property="fb:admins" content="580836304" />
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="1awryQInD3HozenninKoxB5aVcXeeKJdK+qPWMXkrGT+KOoPU5sfKINLhsCSQlI410v4xwrGndqTu3CpPKXl9g==" />
+
+
+
+    <script src="https://public-assets.envato-static.com/assets/market/core/head-df4183f2f1b84caa8ad6707c533e562f18a9eaae2b2e4d2081cf439c23343ad3.js" nonce="Jsx9QjbtNQ8OK3mjVkQMfw=="></script>
+  </head>
+  <body id="" class=" " data-view="app" data-responsive="true" data-user-signed-in="false" >
+    
+    <!--[if lte IE 8]>
+  <div style="color:#fff;background:#f00;padding:20px;text-align:center;">
+    ThemeForest no longer actively supports this version of Internet Explorer. We suggest that you <a href="https://windows.microsoft.com/en-us/internet-explorer/download-ie" style="color:#fff;text-decoration:underline;">upgrade to a newer version</a> or <a href="https://browsehappy.com/" style="color:#fff;text-decoration:underline;">try a different browser</a>.
+  </div>
+<![endif]-->
+
+
+    <div class="page">
+          <div class="page__off-canvas--left overthrow">
+            
+<div class="off-canvas-left js-off-canvas-left">
+  <div class="off-canvas-left__top">
+    <a href="https://themeforest.net">Envato Market</a>
+  </div>
+
+  <div class="off-canvas-left__current-site -color-themeforest">
+  <span class="off-canvas-left__site-title">
+    Web Themes &amp; Templates
+  </span>
+
+  <a class="off-canvas-left__current-site-toggle -white-arrow -color-themeforest" data-view="dropdown" data-dropdown-target=".off-canvas-left__sites" href="#"></a>
+</div>
+
+<div class="off-canvas-left__sites is-hidden" id="off-canvas-sites">
+    <a class="off-canvas-left__site" href="https://codecanyon.net/?auto_signin=true">
+      <span class="off-canvas-left__site-title">
+        Code
+      </span>
+      <i class="e-icon -icon-right-open"></i>
+</a>    <a class="off-canvas-left__site" href="https://videohive.net/?auto_signin=true">
+      <span class="off-canvas-left__site-title">
+        Video
+      </span>
+      <i class="e-icon -icon-right-open"></i>
+</a>    <a class="off-canvas-left__site" href="https://audiojungle.net/?auto_signin=true">
+      <span class="off-canvas-left__site-title">
+        Audio
+      </span>
+      <i class="e-icon -icon-right-open"></i>
+</a>    <a class="off-canvas-left__site" href="https://graphicriver.net/?auto_signin=true">
+      <span class="off-canvas-left__site-title">
+        Graphics
+      </span>
+      <i class="e-icon -icon-right-open"></i>
+</a>    <a class="off-canvas-left__site" href="https://photodune.net/?auto_signin=true">
+      <span class="off-canvas-left__site-title">
+        Photos
+      </span>
+      <i class="e-icon -icon-right-open"></i>
+</a>    <a class="off-canvas-left__site" href="https://3docean.net/?auto_signin=true">
+      <span class="off-canvas-left__site-title">
+        3D Files
+      </span>
+      <i class="e-icon -icon-right-open"></i>
+</a></div>
+
+  
+<div class="off-canvas-left__search">
+  <form id="search" action="/category/all" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+    <div class="search-field -border-none">
+      <div class="search-field__input">
+        <input id="term" name="term" type="search" placeholder="Search" class="search-field__input-field" />
+      </div>
+      <button class="search-field__button" type="submit">
+        <i class="e-icon -icon-search"><span class="e-icon__alt">Search</span></i>
+      </button>
+    </div>
+</form></div>
+
+  
+<ul>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/page/top_sellers">Popular Files</a>
+    </li>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/feature">Featured Files</a>
+    </li>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/category/all?date=this-month&amp;sort=sales&amp;utf8=%E2%9C%93&amp;view=list">Top New Files</a>
+    </li>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/follow_feed">Follow Feed</a>
+    </li>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/authors/top">Top Authors</a>
+    </li>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/page/top_new_sellers">Top New Authors</a>
+    </li>
+    <li>
+      <a class="off-canvas-category-link--empty" href="/collections">Public Collections</a>
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-wordpress" href="/category/wordpress">
+    WordPress
+</a>  <ul class="is-hidden" id="off-canvas-wordpress">
+      <li><a class="off-canvas-category-link--sub" href="/category/wordpress">Show all WordPress</a></li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/popular_item/by_category?category=wordpress">Popular Items</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/blog-magazine">Blog / Magazine</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/buddypress">BuddyPress</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/corporate">Corporate</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/creative">Creative</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/corporate/directory-listings">Directory &amp; Listings</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/ecommerce">eCommerce</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/education">Education</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/attributes/compatible-with/elementor">Elementor</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/entertainment">Entertainment</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/mobile">Mobile</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/nonprofit">Nonprofit</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/real-estate">Real Estate</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/retail">Retail</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/technology">Technology</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/wedding">Wedding</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/miscellaneous">Miscellaneous</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://codecanyon.net/category/wordpress">WordPress Plugins <span class='is-visually-hidden'>on CodeCanyon</span></a>
+      </li>
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-template-kits" href="/category/template-kits">
+    Template Kits
+</a>  <ul class="is-hidden" id="off-canvas-template-kits">
+
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/template-kits/elementor">Elementor</a>
+      </li>
+
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link--empty" href="https://themeforest.net/wordpress-hosting">
+    Hosting
+</a>
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-html" href="/category/site-templates">
+    HTML
+</a>  <ul class="is-hidden" id="off-canvas-html">
+      <li><a class="off-canvas-category-link--sub" href="/category/site-templates">Show all HTML</a></li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/popular_item/by_category?category=site-templates">Popular Items</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/admin-templates">Admin Templates</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/corporate">Corporate</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/creative">Creative</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/entertainment">Entertainment</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/mobile">Mobile</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/nonprofit">Nonprofit</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/personal">Personal</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/retail">Retail</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/specialty-pages">Specialty Pages</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/technology">Technology</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/wedding">Wedding</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/site-templates/miscellaneous">Miscellaneous</a>
+      </li>
+
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-marketing" href="/category/marketing">
+    Marketing
+</a>  <ul class="is-hidden" id="off-canvas-marketing">
+      <li><a class="off-canvas-category-link--sub" href="/category/marketing">Show all Marketing</a></li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/popular_item/by_category?category=marketing">Popular Items</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/marketing/email-templates">Email Templates</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/marketing/landing-pages">Landing Pages</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/marketing/pagewiz">Pagewiz</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/marketing/unbounce-landing-pages">Unbounce Landing Pages</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://codecanyon.net/category/html5/ad-templates?platform=Google%2BWeb%2BDesigner">Google Web Designer Ads <span class='is-visually-hidden'>on CodeCanyon</span></a>
+      </li>
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-cms" href="/category/cms-themes">
+    CMS
+</a>  <ul class="is-hidden" id="off-canvas-cms">
+      <li><a class="off-canvas-category-link--sub" href="/category/cms-themes">Show all CMS</a></li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/popular_item/by_category?category=cms-themes">Popular Items</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/concrete5">Concrete5</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/drupal">Drupal</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/joomla">Joomla</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/modx-themes">MODX Themes</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/moodle">Moodle</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/mura">Mura</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/webflow">Webflow</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/weebly">Weebly</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/miscellaneous">Miscellaneous</a>
+      </li>
+
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-ecommerce" href="/category/ecommerce">
+    eCommerce
+</a>  <ul class="is-hidden" id="off-canvas-ecommerce">
+      <li><a class="off-canvas-category-link--sub" href="/category/ecommerce">Show all eCommerce</a></li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/popular_item/by_category?category=ecommerce">Popular Items</a>
+      </li>
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/ecommerce/woocommerce">WooCommerce</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/3dcart">3dcart</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/bigcommerce">BigCommerce</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/ecommerce/cart66">Cart66</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/cs-cart">CS-Cart</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/attributes/compatible-with/Drupal Commerce?sort=date">Drupal Commerce</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/search?compatible_with=Easy+Digital+Downloads">Easy Digital Downloads</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/attributes/themeforest-files-included/ecwid%20css%20files">Ecwid</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/ecommerce/jigoshop">Jigoshop</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/magento">Magento</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/opencart">OpenCart</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/oscommerce">osCommerce</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/prestashop">PrestaShop</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/shopify">Shopify</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/attributes/compatible-with/Ubercart?sort=date">Ubercart</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/cms-themes/joomla/virtuemart">VirtueMart</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/wordpress/ecommerce/wp-e-commerce">WP e-Commerce</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ecommerce/zen-cart">Zen Cart</a>
+      </li>
+
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-ui-templates" href="/category/ui-templates">
+    UI Templates
+</a>  <ul class="is-hidden" id="off-canvas-ui-templates">
+
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ui-templates/figma">Figma</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ui-templates/adobe-xd">Adobe XD</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ui-templates/photoshop">Photoshop</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="/category/ui-templates/sketch">Sketch</a>
+      </li>
+
+  </ul>
+
+    </li>
+    <li>
+        <a class="off-canvas-category-link--empty" href="https://codecanyon.net/category/wordpress">
+    Plugins
+</a>
+    </li>
+    <li>
+        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-logo-maker" href="https://placeit.net/logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=logo-maker">
+    Logo Maker
+</a>  <ul class="is-hidden" id="off-canvas-logo-maker">
+
+
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/business-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=business-logo-maker">Business Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/make-a-gaming-logo?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=gaming-logo-maker">Gaming Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/twitch-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=twitch-logo-maker">Twitch Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/make-your-own-sports-logo-design?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=sports-logo-maker">Sports Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/real-estate-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=real-estate-logo-maker">Real Estate Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/make-a-medical-logo?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=medical-logo-maker">Medical Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/service-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=service-logo-maker">Service Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/fitness-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=fitness-brand-logo-maker">Fitness Brand Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/clothing-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=clothing-logo-maker">Clothing Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/restaurant-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=restaurant-logo-maker">Restaurant Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/bar-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=bar-logo-maker">Bar Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/beauty-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=beauty-logo-maker">Beauty Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/bakery-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=bakery-logo-maker">Bakery Logo Maker</a>
+      </li>
+      <li>
+        <a class="off-canvas-category-link--sub" href="https://placeit.net/youtube-logo-maker?utm_source=envatomarket&amp;utm_medium=promos&amp;utm_campaign=placeit_mkt-menu-logo&amp;utm_content=youtube-logo-maker">YouTube Logo Maker</a>
+      </li>
+
+  </ul>
+
+    </li>
+
+    <li>
+      <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-more" href="/category">More</a>
+
+      <ul class="is-hidden" id="off-canvas-more">
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/blogging">Blogging</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/courses">Courses</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/attributes/compatible-with/facebook">Facebook Templates</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/forums">Forums</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="https://elements.envato.com/extensions/wordpress">Free Elementor Templates</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/blogging/ghost-themes">Ghost Themes</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/static-site-generators/jekyll">Jekyll</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/muse-templates">Muse Templates</a>
+          </li>
+          <li>
+            <a class="off-canvas-category-link--sub" href="/category/blogging/tumblr">Tumblr</a>
+          </li>
+      </ul>
+    </li>
+</ul>
+
+</div>
+
+          </div>
+
+        <div class="page__off-canvas--right overthrow">
+          <div class="off-canvas-right">
+    <a class="off-canvas-right__link--cart" href="/cart">
+  Guest Cart
+  <div class="shopping-cart-summary is-empty" data-view="cartCount">
+    <span class="js-cart-summary-count shopping-cart-summary__count">0</span>
+    <i class="e-icon -icon-cart"></i>
+  </div>
+</a>
+<a class="off-canvas-right__link" href="/sign_up?action_name=checkout&amp;resource_id=71255149">
+  Create an Envato Account
+  <i class="e-icon -icon-envato"></i>
+</a>
+<a class="off-canvas-right__link" href="/sign_in?action_name=checkout&amp;resource_id=71255149">
+  Sign In
+  <i class="e-icon -icon-login"></i>
+</a>
+</div>
+
+        </div>
+
+      <div class="page__canvas">
+        <div class="canvas">
+          <div class="canvas__header">
+              <div class="banner" style="display: none;" data-view="banner" data-cache-key="banner_elements_mkt-header_general_9Nov2020_D_cache" data-google-analytics-payload="{&quot;actionData&quot;:null,&quot;productsArray&quot;:[{&quot;id&quot;:&quot;elements_mkt-header_general_9Nov2020_D&quot;,&quot;name&quot;:&quot;elements_mkt-header_general_9Nov2020_D&quot;}],&quot;timestamp&quot;:1607429870}" data-cookiebot-enabled="true">
+
+      <div class="headerstrip-wrapper">
+  <button title="dismiss" type="button" class='js-banner__dismiss headerstrip__banner-dismiss'>
+    <svg class="headerstrip__dismiss-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.8 2.4c.3.3.3.8 0 1.1l-6 6c-.3.3-.3.8 0 1.1l6 6c.3.3.3.8 0 1.1l-2.2 2.2c-.3.3-.8.3-1.1 0l-6-6c-.3-.3-.8-.3-1.1 0l-6 6c-.3.3-.8.3-1.1 0L.1 17.7c-.3-.3-.3-.8 0-1.1l6-6c.3-.3.3-.8 0-1.1l-6-6c-.3-.3-.3-.8 0-1.1L2.3.2c.3-.3.8-.3 1.1 0l6 6c.3.3.8.3 1.1 0l6-6c.3-.3.8-.3 1.1 0l2.2 2.2z"/>
+    </svg>
+  </button>
+  <a class="headerstrip js-banner__link" href="https://elements.envato.com/pricing?utm_campaign=elements_mkt-header_general_9Nov2020_D&amp;utm_content=tf_header-bar&amp;utm_medium=promos&amp;utm_source=themeforest.net" target="_blank" rel="noopener noreferrer">
+    <div class="headerstrip-content-background"></div>
+    <div class="headerstrip-canvas is-hidden-desktop">
+      <div class="headerstrip-content">
+        <div class="headerstrip-text">
+          <strong>Envato Elements:</strong>
+          <span class="js-banner__link headerstrip-cta-mobile" href="https://elements.envato.com/pricing?utm_campaign=elements_mkt-header_general_9Nov2020_D&amp;utm_content=tf_header-bar&amp;utm_medium=promos&amp;utm_source=themeforest.net">Go Unlimited</span>
+        </div>
+      </div>
+    </div>
+    <div class="headerstrip-canvas is-hidden-tablet-and-below">
+      <div class="headerstrip-content">
+        <div class="headerstrip-text">
+          <strong>Envato Elements:</strong>  Millions of creative assets. Unlimited downloads. One low cost.
+        </div>
+        <span class="js-banner__link headerstrip-cta" href="https://elements.envato.com/pricing?utm_campaign=elements_mkt-header_general_9Nov2020_D&amp;utm_content=tf_header-bar&amp;utm_medium=promos&amp;utm_source=themeforest.net">From $16.50/m</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<style media="screen">
+  .headerstrip-wrapper {
+  height: 50px;
+  position: relative;
+}
+
+.headerstrip-wrapper .headerstrip__banner-dismiss {
+  width: 12px;
+  height: 12px;
+  background: none;
+  border: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  position: absolute;
+  font: inherit;
+  height: 100%;
+  line-height: 0;
+  cursor: pointer;
+  outline: inherit;
+  opacity: 0.4;
+  padding: 0 16px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.headerstrip-wrapper .headerstrip__banner-dismiss:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.headerstrip-wrapper .headerstrip__banner-dismiss svg {
+  fill: #000000;
+}
+
+.headerstrip {
+  display: block;
+  height: 50px;
+  font-family: arial;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none !important;
+  z-index: 1;
+}
+
+.headerstrip .headerstrip-content-background {
+  background-color: #fff;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFF; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #FFFFFF, #FFFFFF); /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to right, #FFFFFF, #FFFFFF); /* Standard syntax */
+  background-repeat: repeat-x;
+}
+
+.headerstrip .headerstrip-canvas {
+  height: 50px;
+  margin: auto auto;
+}
+
+.headerstrip .headerstrip-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 1000px 50px;
+  width: 100%;
+  height: 50px;
+  max-width: 1408px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+.headerstrip .headerstrip-text {
+  color: #383838;
+  text-decoration: none;
+  padding-right: 24px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+
+.headerstrip .headerstrip-text strong {
+  font-weight: 600;
+}
+
+.headerstrip .headerstrip-cta-container {
+  display: flex;
+}
+
+.headerstrip .headerstrip-cta {
+  position: relative;
+  background-color: #F73859;
+  padding: 5px 30px;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  min-width: 100px;
+}
+
+.headerstrip .headerstrip-cta-mobile {
+  color: #F73859;
+  text-decoration: underline;
+  padding-left: 5px;
+}
+
+.headerstrip .headerstrip-cta-mobile:hover {
+  color: #F73859;
+}
+
+
+.headerstrip .is-hidden-desktop .headerstrip-content {
+  text-align: center;
+}
+
+.headerstrip .is-hidden-desktop .headerstrip-text {
+  position: relative;
+  padding-right: 24px;
+}
+
+.headerstrip .is-hidden-desktop .headerstrip__banner-dismiss {
+  margin-left: 0;
+}
+
+.headerstrip .headerstrip__dismiss-icon {
+  width: 12px;
+  height: 12px;
+  fill: #383838;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .headerstrip .is-hidden-tablet-and-below {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .headerstrip .is-hidden-desktop {
+    display: none !important
+  }
+}
+
+</style>
+
+</div>
+
+            <header class="site-header">
+                <div class="site-header__mini is-hidden-desktop">
+                  <div class="header-mini">
+  <div class="header-mini__button--account">
+    <a class="btn btn--square" data-view="offCanvasNavToggle" data-off-canvas="right" href="#account">
+      <i class="e-icon -icon-person"></i>
+      <span class="is-hidden">Account</span>
+</a>  </div>
+
+
+  <div class="header-mini__logo">
+  <a href="https://themeforest.net/?auto_signin=true">
+    <img alt="ThemeForest" class="header-mini__logo--themeforest" src="https://public-assets.envato-static.com/assets/common/transparent-1px-93ae7d494fad0fb30cbf3ae746a39c4bc7a0f8bbf87fbb587a3f3c01f3c5ce20.png" />
+</a></div>
+
+
+</div>
+
+                </div>
+
+              <div class="site-header__logo-and-account--minimal is-hidden-tablet-and-below">
+                <div class="header-logo-account">
+  <div class="grid-container -layout-wide">
+    <div class="header-logo-account__container">
+      <a class="header-logo-account__logo" href="https://themeforest.net">
+        <span>Envato Market</span>
+      </a>
+      <nav class="header-logo-account__right">
+        <ul class="header-logo-account__sundry">
+        </ul>
+
+        <div class="header-logo-account__user-nav">
+            <div class="header-logo-account__user-nav-item">
+  <strong>
+    <a class="header-logo-account__user-nav-main-link--alpha" data-view="modalAjax" href="/sign_up?action_name=checkout&amp;resource_id=71255149"><span>Create an Envato Account</span></a>
+  </strong>
+</div>
+
+<div class="header-logo-account__user-nav-item">
+  <a class="header-logo-account__user-nav-main-link--cart" rel="nofollow" href="//themeforest.net/cart">
+    <div class="shopping-cart-summary is-empty" data-view="cartCount">
+      <i class="e-icon -icon-cart"></i>
+      <span class="js-cart-summary-count shopping-cart-summary__count">0</span>
+    </div>
+</a></div>
+
+
+<div class="header-logo-account__user-nav-item">
+  <a rel="nofollow" class="header-logo-account__user-nav-main-link--omega" data-view="modalAjax" href="/sign_in?action_name=checkout&amp;resource_id=71255149">Sign In</a>
+</div>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </header>
+          </div>
+
+          <div class="js-canvas__body canvas__body">
+                  <div class="context-header ">
+  <div class="grid-container h-mt1">
+    
+
+      <div class="context-header__heading h-pull-left">
+<h1 class="t-heading -color-inherit -responsive-size-l h-m0">      <div class="secure-payment-page-header">
+        <div class="secure-payment-page-header__icon"><i class="e-icon -icon-lock"></i></div>
+        <div>Secure Checkout</div>
+      </div>
+</h1></div>
+
+<div class="page-title__result-count h-pull-left">
+  
+</div>
+
+
+
+<div class="h-clear"></div>
+
+
+    
+
+
+  </div>
+</div>
+
+
+              <div class="grid-container">
+</div>
+
+
+            
+
+            <div class="content-main--basic" id="content">
+              
+              <div class="">
+                
+
+<section class="page-section -size-compact -color-white js-adi-data-wrapper js-author-ga adi-variant-2" data-view="pjax" data-pjax-fragments="[&quot;#billing-details&quot;, &quot;#payment-method&quot;, &quot;#order-summary&quot;]" data-pjax-override-popstate="">
+  <div class="grid-container" data-view="checkoutPage" data-props="{&quot;just_initiated_checkout&quot;:false,&quot;just_authenticated&quot;:false,&quot;current_step&quot;:&quot;create_account&quot;}" data-google-analytics-payload="{&quot;actionData&quot;:null,&quot;productsArray&quot;:[{&quot;id&quot;:29294609,&quot;name&quot;:&quot;UniCoach - Multipurpose UpSkill WordPress Theme&quot;,&quot;variant&quot;:&quot;regular&quot;,&quot;category&quot;:&quot;themeforest.net/category/wordpress/education&quot;,&quot;brand&quot;:&quot;WebGeniusLab&quot;,&quot;price&quot;:&quot;19.00&quot;,&quot;quantity&quot;:&quot;1&quot;,&quot;dimension14&quot;:&quot;bundle_6month&quot;}],&quot;timestamp&quot;:1607429870}">
+    
+    <div class="js-checkout layout -sidebar-right">
+      <div class="js-checkout__main-content layout__main-content">
+            <div class="e-fieldset">
+  <header class="e-fieldset__header  -divider-bottom">
+    <div class="e-fieldset__title">
+      <h3 class="t-heading -size-s h-m0">
+        Create Account
+      </h3>
+    </div>
+      <div class="e-fieldset__action">
+        <span class="t-body -size-m h-m0">
+          Already have an account?&nbsp;
+        </span>
+        <a class="e-btn -color-light -size-xs js-checkout__signin" data-view="modalAjax" href="/sign_in?action_name=checkout&amp;resource_id=71255149">Sign In</a>
+      </div>
+  </header>
+    <div class="sso-form--checkout-sign-up" data-view="signUpForm" data-sign-up-step="1.1" data-props="{&quot;site_key&quot;:&quot;6LcigAcTAAAAAAruaW_goIkW3FD2oZR40YqDXgcB&quot;,&quot;site_slug&quot;:&quot;themeforest&quot;,&quot;sso_host&quot;:&quot;https://account.envato.com&quot;,&quot;in_checkout&quot;:true}">
+      <form class="js-sign-up__session-form" action="/sso/account_created_from_checkout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="KtzyLg+Yd20amqxrOeTeSWKrfM0Aj4rEmg5GlkrEi1nOFyvZkujNOGALcnoPc6g/gUI9cGzUV1JcMzrlRX47Vw==" />
+        <input type="hidden" name="token" id="token" class="js-sign-up__session-token" />
+        <input type="hidden" name="checkout_id" id="checkout_id" value="71255149" />
+        <input type="hidden" name="subscribe_to_newsletter" id="subscribe_to_newsletter" value="" class="js-sign-up__session-newsletter-sub" />
+        <input type="hidden" name="user_accepted_terms" id="user_accepted_terms" value="true" class="js-sign-up__user-accepted-terms" />
+</form>
+      <form class="simple_form js-sign-up__form e-form" id="sign-up-form" action="https://account.envato.com/sign_up?to=themeforest" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="QmbDgIih6vT3SxT4QSsXmb3yGppRkbwtKEX+6/jeNLjUtUUxzwgCkJA93q4WDvuO0vqbSBUjebxCV4lr6Vm2Gg==" />
+
+        <div class="e-fieldset__body">
+          <p class="t-body">Sign up to Envato Market to get started.</p>
+
+          <fieldset class="sso-form__step1">
+            <div am-Grid>
+              <div am-Grid-Col="l:4" am-Grid-Row="l:start">
+                <div class="e-form__group"><div class="e-form__label"><label for="sso_sign_up_form_first_name">First name</label></div><div class="e-form__input"><input class="f-input -type-string js-sign-up__first-name -width-full" data-error="{&quot;required&quot;:&quot;We need your first name.&quot;}" type="text" name="sso_sign_up_form[first_name]" id="sso_sign_up_form_first_name" /></div></div>
+
+              </div>
+              <div am-Grid-Col="l:4" am-Grid-Row="l:end">
+                <div class="e-form__group"><div class="e-form__label"><label for="sso_sign_up_form_last_name">Last name</label></div><div class="e-form__input"><input class="f-input -type-string js-sign-up__last-name -width-full" data-error="{&quot;required&quot;:&quot;We need your last name.&quot;}" type="text" name="sso_sign_up_form[last_name]" id="sso_sign_up_form_last_name" /></div></div>
+
+              </div>
+              <div am-Grid-Col="l:8" am-Grid-Row="l:start l:end">
+                <div class="e-form__group"><div class="e-form__label"><label for="sso_sign_up_form_email">Email</label></div><div class="e-form__input"><input class="string f-input -type-string js-sign-up__email -width-full f-input -type-string" data-icon="true" data-error="{&quot;required&quot;:&quot;We need your email.&quot;}" type="text" name="sso_sign_up_form[email]" id="sso_sign_up_form_email" /></div><div class="e-form__hint">We will send you a link to access your items.</div></div>
+
+              </div>
+              <div class="e-form__group">
+  <div class="e-form__input">
+    <input name="sso_sign_up_form[terms_agreement]" type="hidden" value="0" /><input class="js-sign-up__terms" data-error="{&quot;required&quot;:&quot;You must agree to the terms and conditions to continue&quot;}" type="checkbox" value="1" name="sso_sign_up_form[terms_agreement]" id="sso_sign_up_form_terms_agreement" />
+    <label class="t-body -size-m" for="sso_sign_up_form_terms_agreement">I agree to the <a target="_blank" href="/legal/market">Terms and Conditions</a></label>
+  </div>
+</div>
+
+              <div class="e-form__group -spacing-none">
+  <div class="e-form__input">
+    <label class="t-body -size-m" for="privacy_agreement">Envato collects and uses personal data in accordance with our <a target="_blank" href="https://envato.com/privacy">Privacy Policy</a>
+</label>
+  </div>
+</div>
+
+            </div>
+          </fieldset>
+
+          <fieldset class="js-signup__step2 sso-form__step2 h-mt2">
+            <p class="t-body -size-m">
+              Thanks <span class="js-sign-up__first-name-display"></span>! Now choose your sign in details.
+            </p>
+            <div am-Grid class="h-mb2">
+              <div am-Grid-Col="l:8" am-Grid-Row="l:start l:end">
+                <div class="e-form__group"><div class="e-form__label"><label for="sso_sign_up_form_username">Choose your username</label></div><div class="e-form__input"><input class="f-input -type-string js-sign-up__username -width-full" data-icon="true" data-error="{&quot;required&quot;:&quot;We need your username.&quot;,&quot;in_use&quot;:&quot;Someone beat you to it! Try another username.&quot;,&quot;invalid&quot;:&quot;Username can only contain letters, numbers and underscores.&quot;}" type="text" name="sso_sign_up_form[username]" id="sso_sign_up_form_username" /></div><div class="e-form__hint">Letters, numbers and underscores.</div></div>
+
+                <div class="e-form__group">
+  <div class="e-form__label">
+    <label for="sso_sign_up_form_password">Choose your password</label>
+  </div>
+  <div class="e-form__input">
+    <div class="js-sign-up__password-strength password-strength">
+      <input class="f-input -type-password js-sign-up__password -width-full" data-icon="true" data-error="{&quot;required&quot;:&quot;We need your password.&quot;,&quot;invalid&quot;:&quot;That&#39;s too weak, try a longer password.&quot;}" type="password" name="sso_sign_up_form[password]" id="sso_sign_up_form_password" />
+      <div class="password-strength__indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+</div>  </div>
+  <div class="e-form__response"></div>
+  <div class="e-form__hint">Longer passwords are stronger.</div>
+</div>
+
+                <div class="sso-form__recaptcha">
+  <div class="e-form__group">
+    <div class="e-form__input">
+      <div class="js-recaptcha recaptcha">
+        <span id="sso-recaptcha" class="g-recaptcha" data-tabindex="6"></span>
+      </div>
+    </div>
+    <div class="e-form__response"></div>
+  </div>
+</div>
+
+                  <script src="https://www.google.com/recaptcha/api.js?render=explicit" async="async" defer="defer" nonce="Jsx9QjbtNQ8OK3mjVkQMfw=="></script>
+
+              </div>
+            </div>
+            <div class="e-form__group">
+              <div class="e-form__input">
+                <input type="checkbox" name="newsletter_sub" id="newsletter_sub" value="1" class="js-sign-up__newsletter-sub" checked="checked" />
+                <label class="t-body -size-m" for="newsletter_sub">Send me tips, trends, freebies, updates &amp; offers. You can unsubscribe at any time.</label>
+              </div>
+            </div>
+
+            <div class="sso-form__errors">
+              <div class="e-form__group">
+                <ul class="js-sign-up__errors e-form__base-errors"></ul>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="e-fieldset__footer">
+          <footer class="sso-form__step1-1">
+            <a class="js-sign-up__goto-step2 e-btn--3d -color-primary" href="#step_2">Next</a>
+          </footer>
+
+          <footer class="sso-form__step1-2">
+            <a class="e-btn--3d -color-warning h-mb1" data-view="modalAjax" href="/sign_in?action_name=checkout&amp;resource_id=71255149">Yes, that&#39;s me! Take me to sign in</a>
+            <p class="t-body -size-m h-m0">If this is not you, please use a different email address.</p>
+          </footer>
+
+          <footer class="sso-form__step2">
+            <input type="submit" name="commit" value="Create account &amp; continue" class="js-sign-up__submit e-btn--3d -color-primary" data-disabled-submit-text="Creating your account&hellip;" />
+          </footer>
+        </div>
+</form></div>
+    <div class="sso-form__fallback">
+  <div class="e-fieldset__body">
+    <p class="t-body">Sign up to Envato Market to get started.</p>
+    <a class="e-btn--3d -color-primary -size-m h-my1" href="https://account.envato.com/sign_up?to=themeforest">Create account</a>
+  </div>
+</div>
+
+
+</div>
+
+            <div class="e-fieldset is-disabled" id="billing-details">
+  <header class="e-fieldset__header">
+    <div class="e-fieldset__title">
+      <h3 class="t-heading -size-s h-m0">
+        Billing Details
+
+      </h3>
+    </div>
+  </header>
+</div>
+
+
+            <div id="payment-method" data-view="paymentMethod">
+
+  <div class="e-fieldset  is-disabled">
+
+    <header class="e-fieldset__header ">
+      <div class="e-fieldset__title">
+        <h3 class="t-heading -size-s h-m0">Select Payment Method</h3>
+      </div>
+</header>
+</div></div>
+      </div>
+
+      <aside class="js-checkout__floating-sidebar layout__sidebar is-hidden-tablet-and-below">
+        <div class="e-fieldset -color-dark" id="order-summary">
+  <header class="e-fieldset__header -divider-bottom">
+    <div class="e-fieldset__title">
+      <h3 class="t-heading -size-xs h-m0">Order Summary</h3>
+    </div>
+  </header>
+
+  <div class="e-fieldset__body">
+    <div class="order-summary">
+      <div class="order-summary__group">
+          <div class="order-summary__entry">
+            <div class="order-summary__description h-text-truncate" title="UniCoach - Multipurpose UpSkill WordPress Theme">
+              UniCoach - Multipurpose UpSkill WordPress Theme
+            </div>
+            <div class="order-summary__price">$19.00</div>
+          </div>
+      </div>
+      <div class="order-summary__group -divider-top">
+        <div class="order-summary__entry">
+          <div class="order-summary__description h-text-truncate">Handling Fee:</div>
+          <div class="order-summary__price">$0.00</div>
+        </div>
+      </div>
+
+      <div class="order-summary__group -divider-top">
+        <div class="order-summary__entry h-m0">
+          <div class="order-summary__description h-text-truncate">
+            <h4 class="t-heading -size-s h-m0">Total:</h4>
+          </div>
+          <div class="order-summary__total">
+            <h4 class="t-heading -size-s h-m0">
+              <b>US<span class="t-currency">$19.00</span></b>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="secure-checkout-banner__container h-text-align-center">
+  <span class="secure-checkout-banner__body -size-m">
+  <i class="e-icon -icon-lock"></i>
+  Secure checkout
+</span>
+
+</div>
+
+      </aside>
+    </div>
+</div></section>
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit" async="async" defer="defer" nonce="Jsx9QjbtNQ8OK3mjVkQMfw=="></script>
+
+
+
+
+              </div>
+            </div>
+
+            
+
+            <footer class="site-footer">
+  <div class="grid-container">
+    <p class="t-body h-m0"><small>&copy; 2020 Envato Pty Ltd. Trademarks and brands are the property of their respective owners.</small></p>
+  </div>
+</footer>
+
+          </div>
+
+          <div class="is-hidden-phone">
+            <div id="tooltip-magnifier" class="magnifier">
+  <strong></strong>
+  <div class="info">
+    <div class="author-category">
+      by <span class="author"></span>
+    </div>
+    <div class="price">
+      <span class="cost"></span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="category"></span>
+      <span class="gst-notice">All prices are in US dollars and exclude sales tax</span>
+  </div>
+</div>
+
+            <div id="landscape-image-magnifier" class="magnifier">
+    <div class="size-limiter">
+    </div>
+  <strong></strong>
+  <div class="info">
+    <div class="author-category">
+      by <span class="author"></span>
+    </div>
+    <div class="price">
+      <span class="cost"></span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="category"></span>
+      <span class="gst-notice">All prices are in US dollars and exclude sales tax</span>
+  </div>
+</div>
+
+            <div id="portrait-image-magnifier" class="magnifier">
+    <div class="size-limiter">
+    </div>
+  <strong></strong>
+  <div class="info">
+    <div class="author-category">
+      by <span class="author"></span>
+    </div>
+    <div class="price">
+      <span class="cost"></span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="category"></span>
+      <span class="gst-notice">All prices are in US dollars and exclude sales tax</span>
+  </div>
+</div>
+
+            <div id="square-image-magnifier" class="magnifier">
+    <div class="size-limiter">
+    </div>
+  <strong></strong>
+  <div class="info">
+    <div class="author-category">
+      by <span class="author"></span>
+    </div>
+    <div class="price">
+      <span class="cost"></span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="category"></span>
+      <span class="gst-notice">All prices are in US dollars and exclude sales tax</span>
+  </div>
+</div>
+
+            <div id="smart-image-magnifier" class="magnifier">
+    <div class="size-limiter">
+    </div>
+  <strong></strong>
+  <div class="info">
+    <div class="author-category">
+      by <span class="author"></span>
+    </div>
+    <div class="price">
+      <span class="cost"></span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="category"></span>
+      <span class="gst-notice">All prices are in US dollars and exclude sales tax</span>
+  </div>
+</div>
+
+            <div id="video-magnifier" class="magnifier">
+    <div class="size-limiter">
+    </div>
+  <strong></strong>
+  <div class="info">
+    <div class="author-category">
+      by <span class="author"></span>
+    </div>
+    <div class="price">
+      <span class="cost"></span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="category"></span>
+      <span class="gst-notice">All prices are in US dollars and exclude sales tax</span>
+  </div>
+</div>
+
+          </div>
+        </div>
+
+
+        <div class="page__overlay" data-view="offCanvasNavToggle" data-off-canvas="close"></div>
+      </div>
+    </div>
+
+    
+
+    <script src="https://public-assets.envato-static.com/assets/market/core/index-68dde065bb9853907ded0cad5f6c9fff7147477542f41a60cdc1aaf7839d27a9.js" nonce="Jsx9QjbtNQ8OK3mjVkQMfw=="></script>
+    <script src="https://public-assets.envato-static.com/assets/market/pages/buying/index-e2a6d06b3fd4b46bf6cc4852adbc374e0827c709ab6d51e2775cbd0db960c4db.js" nonce="Jsx9QjbtNQ8OK3mjVkQMfw=="></script>
+
+
+
+
+    
+<div id="affiliate-tracker" class="is-hidden" data-view="affiliatesTracker" data-cookiebot-enabled="true"></div>
+
+
+    <script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">
+//<![CDATA[
+      $(function(){viewloader.execute(Views);});
+
+//]]>
+</script>
+      <script src="https://consent.cookiebot.com/uc.js" data-cbid="58b7468f-7dba-4036-baad-925e721641e5" async="async" id="Cookiebot" nonce="Jsx9QjbtNQ8OK3mjVkQMfw=="></script>
+
+
+  <script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">
+//<![CDATA[
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    var consentCookie = getCookie('CookieConsent');
+
+    if (consentCookie) {
+      var hasConsent = Market.Helpers.CookieConsent.given('statistics');
+
+      if (hasConsent) {
+        setupGoogleAnalytics();
+        loadGoogleAnalytics();
+        loadLinkingForAllAccounts();
+      }
+    } else {
+      setupGoogleAnalytics();
+      loadGoogleAnalytics();
+      loadLinkingForAllAccounts();
+    }
+
+    window.addEventListener('CookiebotOnAccept', function (e) {
+      if (Cookiebot.consent.statistics) {
+        if (!(window.ga && ga.create)) {
+          setupGoogleAnalytics();
+          loadGoogleAnalytics();
+          loadLinkingForAllAccounts();
+        }
+      } else {
+        unloadGoogleAnalytics()
+      }
+      if (!consentToExperimentsEnrollmentGiven()) {
+        unenrollFromExperiments();
+      }
+    }, false);
+
+  function getCookie(name) {
+    var name = name + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieContent = decodedCookie.split(';');
+
+    for(var i = 0; i <cookieContent.length; i++) {
+      var c = cookieContent[i];
+
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+
+    return false;
+  }
+
+  function delete_cookie_by_name(name) {
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  }
+
+  function unloadGoogleAnalytics() {
+    var payload = {"name":"m","allowLinker":true};
+    var accountId = "UA-11834194-7";
+
+    // Set the GA User Opt-out flag
+    window['ga-disable-'+accountId] = true;
+
+    // Do not explicitly make any further calls to ga()
+    ga(payload.name+".remove");
+
+    // Delete any existing GA cookies (_ga, _gat & _gaid) and GA Client ID from localStorage
+    delete_cookie_by_name('_ga');
+    delete_cookie_by_name('_gat');
+    delete_cookie_by_name('_gid');
+
+    // Delete LocalStorage Entries
+    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
+      var clientId = Market.Helpers.GaLsUtils.getClientId();
+
+      if (!clientId) {
+        return;
+      }
+
+      Market.Helpers.GaLsUtils.removeClientId();
+    }
+
+    // Do not transmit the Client ID to other sites upon navigation (i.e. autoLink)
+  }
+
+  function domLoaded() {
+    return new Promise(resolve => {
+      if (
+        document.readyState === 'interactive' ||
+        document.readyState === 'complete'
+      ) {
+        resolve()
+      } else {
+        document.addEventListener(
+          'DOMContentLoaded',
+          () => {
+            resolve()
+          },
+          {
+            capture: true,
+            once: true,
+            passive: true
+          }
+        )
+      }
+    })
+  }
+
+  function consentToExperimentsEnrollmentGiven () {
+    return Market.Helpers.CookieConsent.given('preferences') && Market.Helpers.CookieConsent.given('statistics');
+  }
+
+  function unenrollFromExperiments() {
+    var activeExperimentsConfig = {"globalExperiment":{"id":"Q4KMAh3BQ4qNUNsdMXdprg","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,9],"requires":{}},"newHomepageExperiment":{"id":"eCQGElkrSVqkXjHjD14dBg","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}},"itemCardTagsExperiment":{"id":"KPjrVT2lTZ6xjZWU2O4gng","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}},"homePageCopyUpdates":{"id":"38IZ2heHTeyVuJ9OGcqDnA","loadingCover":true,"variants":["0","1","2","3"],"domain":"themeforest.net","variantsWeights":[1,1,1,1],"requires":{"globalExperiment":{"variants":[1]}}},"updatedCategoryNav":{"id":"fFuj2cGCQrS374O9TUL8rw","loadingCover":true,"variants":["0","1","2","3","4","5"],"domain":"themeforest.net","variantsWeights":[1,1,1,1,1,1],"requires":{"globalExperiment":{"variants":[1]}}}}
+    var deletedCookies = [];
+
+    _.each(activeExperimentsConfig, function(expConfig, name) {
+      var cookieName =  "market_experiment_" + expConfig.id;
+
+      if ($.cookie(cookieName) != null && $.cookie(cookieName) != '' && typeof($.cookie(cookieName)) != 'undefined') {
+        $.removeCookie(cookieName);
+        deletedCookies.push(cookieName);
+      }
+    });
+
+    if(deletedCookies.length > 0) {
+      ga(t+'.set', "exp", null);
+      ga(t+'.set', "dimension21", null);
+      ga(t+'.set', "dimension22", null);
+    }
+  }
+
+  function enrolIntoActiveExperiments() {
+    var activeExperimentsConfig = {"globalExperiment":{"id":"Q4KMAh3BQ4qNUNsdMXdprg","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,9],"requires":{}},"newHomepageExperiment":{"id":"eCQGElkrSVqkXjHjD14dBg","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}},"itemCardTagsExperiment":{"id":"KPjrVT2lTZ6xjZWU2O4gng","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}},"homePageCopyUpdates":{"id":"38IZ2heHTeyVuJ9OGcqDnA","loadingCover":true,"variants":["0","1","2","3"],"domain":"themeforest.net","variantsWeights":[1,1,1,1],"requires":{"globalExperiment":{"variants":[1]}}},"updatedCategoryNav":{"id":"fFuj2cGCQrS374O9TUL8rw","loadingCover":true,"variants":["0","1","2","3","4","5"],"domain":"themeforest.net","variantsWeights":[1,1,1,1,1,1],"requires":{"globalExperiment":{"variants":[1]}}}}
+
+    var independentExperimentConfigs = _.reduce(activeExperimentsConfig, function(memo, expConfig, name) {
+      if(_.isEmpty(expConfig.requires)) {
+        memo[name] = expConfig;
+      }
+      return memo;
+    }, {});
+
+    var dependentExperimentConfigs = _.reduce(activeExperimentsConfig, function(memo, expConfig, name) {
+      if(!_.isEmpty(expConfig.requires)) {
+        memo[name] = expConfig;
+      }
+      return memo;
+    }, {});
+
+    var experimentsConfig = {...independentExperimentConfigs, ...dependentExperimentConfigs};
+
+    if (!_.isEmpty(experimentsConfig)) {
+      var experimentEnrolments = createExperimentEnrollments(experimentsConfig);
+      window.dispatchEvent(new CustomEvent('ExperimentsReady', { payload: experimentEnrolments }));
+    }
+  }
+
+  function areRequirementsMet(experimentsConfig, requiredExperiments) {
+    return _.reduce(requiredExperiments, function(memo, requiredExperimentVariants, requiredExperimentName){
+      var requiredExperiment = experimentsConfig[requiredExperimentName];
+      var requiredExperimentCookieName = "market_experiment_" + requiredExperiment.id;
+      var requiredExperimentVariantEnabled = _.contains(requiredExperimentVariants.variants, +$.cookie(requiredExperimentCookieName));
+
+      return memo && requiredExperimentVariantEnabled;
+    }, true)
+  }
+
+  function selectExperimentVariant(expConfig) {
+    var variantWeights = _.object(expConfig.variants, expConfig.variantsWeights);
+
+    return _.chain(variantWeights).map(function (weight, variant) {
+      return _.times(weight, function() { return variant; });
+    }).flatten().sample().value();
+  }
+
+  function createExperimentEnrollments(activeExperimentsConfig) {
+    var enrollments = _.reduce(activeExperimentsConfig, function(memo, expConfig, name) {
+      var cookieName = "market_experiment_" + expConfig.id;
+
+      if (!$.cookie(cookieName)) {
+        var requirementsMet = areRequirementsMet(activeExperimentsConfig, expConfig.requires);
+
+        if (requirementsMet) {
+          var variant = selectExperimentVariant(expConfig)
+          $.cookie(cookieName, variant, { expires: 365, domain: expConfig.domain, path: '/' });
+        }
+      }
+      if ($.cookie(cookieName)) {
+        memo[expConfig.id] = $.cookie(cookieName);
+      }
+
+      return memo;
+    }, {});
+
+    var enrollmentsString = _.map(_.pairs(enrollments), function(pair) { return pair.join("."); }).join("!");
+
+    ga(t+'.set', "exp", enrollmentsString);
+    ga(t+'.set', "dimension21", enrollmentsString);
+    ga(t+'.set', "dimension22", enrollmentsString);
+
+    return enrollments;
+  }
+
+  function loadLinkingForAllAccounts() {
+    domLoaded().then(() => {
+      var ACCOUNTS = ["m"];
+      window._envGaTrackerNames = ACCOUNTS;
+
+      for (var i = 0; i < ACCOUNTS.length; i++) {
+        t = ACCOUNTS[i];
+
+        ga(t+'.require', 'linker');
+
+        ga(t+'.require', 'linkid', 'linkid.js');
+      };
+
+      document.body.addEventListener('click', function(event) {
+        decorateLink(event);
+      });
+      document.body.addEventListener('contextmenu', function(event) {
+        // Aside from a normal click, we need to handle the variety of ways users
+        // can open a link in a new tab
+        // Right click to open context menu
+        decorateLink(event);
+      });
+      document.body.addEventListener('mousedown', function(event) {
+        // Aside from a normal click, we need to handle the variety of ways users
+        // can open a link in a new tab
+        // Middle mouse button click
+        if (event.button === 1) {
+          decorateLink(event);
+        }
+      });
+    });
+  }
+
+  function decorateLink(event) {
+
+    var ACCOUNTS = ["m"];
+    window._envGaTrackerNames = ACCOUNTS;
+
+    var currentTarget = jQuery(event.target);
+    var link = currentTarget.closest('a')[0];
+    var ourDomains = ["activeden.net","audiojungle.net","themeforest.net","videohive.net","graphicriver.net","3docean.net","codecanyon.net","photodune.net","market.styleguide.envato.com","elements.envato.com","build.envatohostedservices.com","author.envato.com","tutsplus.com","sites.envato.com"];
+    var filteredDomains = ourDomains.filter(function(domain) {
+      return domain !== document.location.hostname;
+    });
+
+    for (var i = 0; i < ACCOUNTS.length; i++) {
+      t = ACCOUNTS[i];
+
+      if (link && link.href) {
+        if (filteredDomains.includes(link.hostname) || currentSiteLinkOpensInNewWindow(link)) {
+          ga(t+'.linker:decorate', link)
+        }
+      }
+    }
+  }
+
+  function currentSiteLinkOpensInNewWindow(link) {
+    return document.location.hostname === link.hostname && link.target === '_blank';
+  }
+
+  function setupGoogleAnalytics() {
+    (function () {
+      var accountId = "UA-11834194-7";
+      window['ga-disable-'+accountId] = false;
+
+      if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
+        var options = {"name":"m","allowLinker":true};
+
+        options.storage = "none";
+        options.clientId = Market.Helpers.GaLsUtils.getClientId();
+
+        var clientIdValid = Market.Helpers.GaLsUtils.clientIdValid(options.clientId);
+        if (!clientIdValid) {
+          options.clientId = null;
+        }
+
+        ga("create", "UA-11834194-7", options);
+        ga(function() {
+          var tracker = ga.getByName(options.name);
+          Market.Helpers.GaLsUtils.storeClientId(tracker.get('clientId'));
+        })
+      } else {
+        ga("create", "UA-11834194-7", {"name":"m","allowLinker":true});
+      }
+
+      var ACCOUNTS = ["m"];
+      window._envGaTrackerNames = ACCOUNTS;
+
+      for (var i = 0; i < ACCOUNTS.length; i++) {
+        t = ACCOUNTS[i];
+
+        ga(t+'.require', "GTM-5VPWWP");
+
+        ga(t+'.require', 'ec');
+
+        ga(t+'.require', 'displayfeatures');
+
+        ga(t+'.set', 'dimension20', 'other')
+
+
+
+
+        if (!getCookie('CookieConsent') || consentToExperimentsEnrollmentGiven()) {
+            enrolIntoActiveExperiments();
+        }
+
+
+        if ('') {
+          ga(t+'.send', {
+            hitType: 'pageview',
+            page: ''
+          });
+        } else if ('') {
+          // append the analytics_suffix to the page path so the flash alert/error type can be tracked
+          var analyticsSuffix = $.trim('').replace(/([A-Z])/g, '$1').replace(/[-_\s]+/g, '-').toLowerCase();
+          var uri = URI(window.location.pathname + window.location.search);
+          uri.path(uri.path() + '/' + analyticsSuffix);
+          var tracking_path = uri.path() + uri.search();
+          ga(t+'.send', {
+            hitType: 'pageview',
+            page: tracking_path,
+          });
+        } else {
+          ga(t+'.send', 'pageview');
+        }
+      }
+
+      loadLinkingForAllAccounts()
+    }());
+  }
+
+  function loadGoogleAnalytics() {
+    (function () {
+
+      var s=document.createElement('script');
+      s.type='text/javascript';
+      s.async=true;
+        s.src='https://www.google-analytics.com/analytics.js';
+      var x=document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s,x);
+    }());
+  }
+
+  
+
+//]]>
+</script>
+
+  
+<script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">
+//<![CDATA[
+
+    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.statistics ) {
+      enableGoogleAnalyticsLinkWrapper();
+    } else {
+      window.addEventListener('CookiebotOnAccept', function (e) {
+        if (Cookiebot.consent.statistics) {
+          enableGoogleAnalyticsLinkWrapper();
+        }
+      }, false);
+    }
+
+  function enableGoogleAnalyticsLinkWrapper() {
+    // GA: universal analytics link wrapper
+    (function(){
+        window._envTrkrs = [["m", "UA-11834194-7"]];
+
+        var debug = false;
+        var MAX_RETRIES = 10;
+
+        /*
+           The script needs to wait until the Analytics script
+           has been downloaded from Google before initializing
+        */
+        var waitForAnalytics = function(){
+            this.count = this.count || 0;
+
+            if (window.ga && ga.getByName) {
+                e.init();
+            } else {
+                if (count < MAX_RETRIES) { setTimeout(waitForAnalytics, 250); }
+                count++;
+            }
+        };
+
+        var e = {
+            _envArray: [],
+            _envTrkrs: (window._envTrkrsCust && window._envTrkrsCust.length) ? window._envTrkrs.concat(window._envTrkrsCust) : window._envTrkrs,
+            init: function() {
+                for (var i=0; i < _envTrkrs.length; i++) {
+                  if(!ga.getByName(_envTrkrs[i][0])) {
+                    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
+                      var clientId = Market.Helpers.GaLsUtils.getClientId();
+
+                      ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], storage: "none", clientId: clientId, allowLinker: true});
+                    } else {
+                      ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], allowLinker: true});
+                    }
+                  }
+                }
+
+                document.addEventListener('DOMContentLoaded', function(){
+                    e.wrapperInit();
+                });
+
+                if (debug) {console.log('Initiated');}
+            },
+            wrapperInit: function() {
+                if (typeof window._envIsRunning != 'undefined' || window._envIsRunning == true) {
+                    return
+                }
+                window._envIsRunning = true;
+
+                if (document.addEventListener) {
+                    document.addEventListener('click', function(event){
+                        var target = event.target;
+                        if (target && target.tagName === 'A') {
+                            e._envLinksTracker(event);
+                        }
+                    });
+                }
+            },
+            isInArray: function(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var r = new RegExp(t[n], 'i');
+                    if (r.test(e)) {
+                        return n
+                    }
+                }
+                return -1
+            },
+            _envTrackevent: function(e, t, n, r) {
+                for (var i = 0; i < this._envTrkrs.length; i++) {
+                    var s = this._envTrkrs[i][0].length == 0 ? '' : this._envTrkrs[i][0] + '.';
+                    r.length == 0 ? ga(s + 'send', 'event', e, t, n) : ga(s + 'send', 'event', e, t, n, r)
+                }
+            },
+            _envTrackpageview: function(e, t) {
+                t = t.charAt(0) == '/' ? t : '/' + t;
+                for (var n = 0; n < this._envTrkrs.length; n++) {
+                    var r = this._envTrkrs[n][0].length == 0 ? '' : this._envTrkrs[n][0] + '.';
+                    ga(r + 'send', 'pageview', e + t);
+                }
+            },
+            _envLinksTracker: function(t) {
+                var r = false;
+                var i = {
+                    outbound: {
+                        run: true,
+                        useEvent: true
+                    },
+                    download: {
+                        run: true,
+                        useEvent: true,
+                        reg: ''
+                    },
+                    self: {
+                        run: false,
+                        useEvent: true
+                    },
+                    mail: {
+                        run: true,
+                        useEvent: true
+                    },
+                    ext: /\.(doc.?|xls.?|ppt.?|exe|zip|rar|gz|tar|tgz|dmg|csv|pdf|xpi|txt|mp3)$/i
+                };
+                var s = t.srcElement ? t.srcElement : this;
+                if (t.srcElement) {
+                    r = true
+                }
+                while (s.tagName != 'A') {
+                    s = s.parentNode
+                }
+                if (s.href == undefined || s.href == null) {
+                    return true
+                }
+                var o = s.href;
+                if (o.length == 0) return;
+                var u = s.hostname.toLowerCase();
+                var a = s.pathname;
+                if (a.length == 0) {
+                    a = '/'
+                } else if (a.substr(0, 1) != '/') {
+                    a = '/' + a
+                }
+                var f = s.protocol;
+                var l = s.search;
+                var c = location.hostname;
+                c = c.replace(/^www\./i, '').toLowerCase();
+                u = u.replace(/^www\./i, '').toLowerCase();
+                if (o.match(/^#/)) {
+                    if (i.self.run) {
+                        i.self.useEvent ? e._envTrackevent('self', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/self', '/' + o);
+                        return true
+                    }
+                } else if (f.match(/^mailto:/i)) {
+                    if (i.mail.run) {
+                        o = o.replace(/^mailto:/i, '');
+                        i.mail.useEvent ? e._envTrackevent('mailto', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/mailto', o);
+                        return true
+                    }
+                } else if ((new RegExp(i.ext)).test(a)) {
+                    if (i.download.run) {
+                        o = o.replace(/^https?:\/\//i, '');
+                        i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
+                        return true
+                    }
+                } else if (u == undefined || u.length == 0 || f.match(/^javascript:/i)) {
+                    return
+                } else if ((new RegExp(c + '$', 'i')).test(u) || (new RegExp(u + '$', 'i')).test(c)) {
+                    if (i.download.run && i.download.reg.length != 0) {
+                        if ((new RegExp(i.download.reg, 'i')).test(a + l)) {
+                            o = o.replace(/^https?:\/\//i, '');
+                            i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
+                            return true
+                        }
+                    }
+                } else if (u != c) {
+                    if (e.isInArray(u, e._envArray) == -1) {
+                        if (i.outbound.run) {
+                            i.outbound.useEvent ? e._envTrackevent('outbound', 'click - ' + c, u + a + l, '') : e._envTrackpageview('/virtual/outbound', u + a);
+                            return true
+                        }
+                    } else if (e.isInArray(u, e._envArray) != -1) {
+                        var h = s.target;
+                        if (h != null && h == '_blank') {
+                            if ((new RegExp(/_utma=/)).test(l)) {
+                                return true
+                            }
+                            var p = e._envTrkrs[0][0].length == 0 ? '' : _envTrkrs[0][0] + '.';
+                            return true
+                        } else {
+                            return false
+                        }
+                    }
+                }
+            }
+        };
+
+        waitForAnalytics();
+    })()
+  }
+
+//]]>
+</script>
+
+
+
+<script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">
+//<![CDATA[
+  // Set New Relic custom attributes
+  (function () {
+    if (typeof newrelic !== 'undefined') {
+      newrelic.setCustomAttribute('pageType', 'other')
+    }
+  })()
+
+//]]>
+</script>
+
+  <script nonce="Jsx9QjbtNQ8OK3mjVkQMfw==">
+//<![CDATA[
+    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.marketing) {
+      enableGoogleTagManager();
+    } else {
+      window.addEventListener('CookiebotOnAccept', function (e) {
+        if (Cookiebot.consent.marketing) {
+          enableGoogleTagManager();
+        }
+      }, false);
+    }
+
+  function enableGoogleTagManager() {
+    var gtmId = 'GTM-585RXMV';
+    // Google Tag Manager Tracking Code
+    (function(w,d,s,l,i) {
+      w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',gtmId);
+
+
+    window.addEventListener('load', function() {
+      window.dataLayer.push({
+        event: 'pinterestReady'
+      });
+    });
+  }
+
+//]]>
+</script>
+
+  </body>
+</html>

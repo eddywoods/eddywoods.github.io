@@ -1,0 +1,65 @@
+﻿    <!DOCTYPE html><html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Join Meeting</title>
+        <link rel='stylesheet' type="text/css" href="../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/bootstrap.css?ver=3.6.8" media='all'>
+        <link rel='stylesheet' type="text/css" href="../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/react-select.css?ver=3.6.8" media='all'>
+        <link rel='stylesheet' type="text/css" href="../wp-content/plugins/video-conferencing-with-zoom-api/assets/public/css/style.min.css?ver=3.6.8" media='all'>
+    </head><body class="join-via-browser-body">
+	    <div id="vczapi-zoom-browser-meeting" class="vczapi-zoom-browser-meeting-wrapper">
+        <div id="vczapi-zoom-browser-meeting--container">
+			                <div class="vczapi-zoom-browser-meeting--info">
+					                        <p style="line-height: 1.5;">
+                            <strong style="color:red;">!!!ALERT!!!: </strong>Browser did not detect a valid SSL certificate. Audio and Video for Zoom meeting will not work on a non HTTPS site, please install a valid SSL certificate to allow audio and video in your Meetings via browser.                        </p>
+					                    <div class="vczapi-zoom-browser-meeting--info__browser"></div>
+                </div>
+			            <form class="vczapi-zoom-browser-meeting--meeting-form" id="vczapi-zoom-browser-meeting-join-form" action="">
+                <div class="form-group">
+                    <input type="text" name="display_name" id="vczapi-jvb-display-name" value="" placeholder="Your Name Here" class="form-control" required="">
+                </div>
+				                    <div class="form-group">
+                        <input type="email" name="display_email" id="vczapi-jvb-email" value="" placeholder="Your Email Here" class="form-control">
+                    </div>
+				                    <div class="form-group">
+                        <select id="meeting_lang" name="meeting-lang" class="form-control">
+                            <option value="en-US">English</option>
+                            <option value="de-DE">German Deutsch</option>
+                            <option value="es-ES">Spanish Español</option>
+                            <option value="fr-FR">French Français</option>
+                            <option value="jp-JP">Japanese 日本語</option>
+                            <option value="pt-PT">Portuguese Portuguese</option>
+                            <option value="ru-RU">Russian Русский</option>
+                            <option value="zh-CN">Chinese 简体中文</option>
+                            <option value="zh-TW">Chinese 繁体中文</option>
+                            <option value="ko-KO">Korean 한국어</option>
+                            <option value="vi-VN">Vietnamese Tiếng Việt</option>
+                            <option value="it-IT">Italian italiano</option>
+                        </select>
+                    </div>
+					
+                <button type="submit" class="btn btn-primary" id="vczapi-zoom-browser-meeting-join-mtg">
+					Join                </button>
+            </form>
+        </div>
+    </div>
+	<aside class="wgl-envato-toolbar"><div class="wgl-toolbar__overlay"></div><div id="wgl-toolbar__container" class="wgl-toolbar__container"><span class="wgl-toolbar__toggle-element"><svg class="laptop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" preserveaspectratio="none"><g><path d="M98.8,366.6h103.5c3.9,8.5,12.5,14.5,22.4,14.5h62.4c10,0,18.6-6,22.4-14.5h103.6c6.8,0,12.3-5.5,12.3-12.3 s-5.5-12.2-12.3-12.2H299.5c-6.8,0-12.3,5.5-12.3,12.2l-0.1,2.3l-62.5-0.1v-2.2c0-6.8-5.5-12.2-12.3-12.2H98.8 c-6.8,0-12.3,5.5-12.3,12.2S92,366.6,98.8,366.6z"></path><path d="M58.7,424.7h394.6c26,0,47.1-21.1,47.1-47.1v-23.2c0-6.8-5.5-12.2-12.3-12.2h-23.2V119.4c0-0.4,0-0.8-0.1-1.2 c-1.7-17.6-16-30.9-33.1-30.9H79c-17.7,0-32.1,14.4-32.1,32.1v222.7H23.8c-6.8,0-12.3,5.5-12.3,12.2v23.2 C11.5,403.5,32.7,424.7,58.7,424.7z M36,366.6h23.1c6.8,0,12.3-5.5,12.3-12.3V119.4c0-4.2,3.4-7.6,7.6-7.6h352.8 c4.3,0,8,3.6,8.7,8.3v234.2c0,6.8,5.6,12.3,12.3,12.3H476v10.9c0,12.5-10.2,22.6-22.6,22.6H58.7C46.2,400.2,36,390,36,377.6V366.6z"></path><path d="M226.1,277.4c2.3,2.3,5.4,3.6,8.7,3.6c0,0,0,0,0,0c3.2,0,6.3-1.3,8.6-3.6l72.8-72.4c4.8-4.8,4.8-12.5,0.1-17.3 c-4.8-4.8-12.5-4.8-17.3,0l-64.1,63.8l-21.8-21.9c-4.8-4.8-12.5-4.8-17.3,0c-4.8,4.8-4.8,12.5-0.1,17.3L226.1,277.4z"></path></g></svg><span class="wgl-env-theme-close_icon">Themes &amp; Support</span></span><div class="wgl-toolbar__theme-list"><div class="wgl-env-theme_meta-info"><div class="wgl-env-theme__btn"><div class="toolbar_btn"><a class="toolbar_btn-support toolbar_link" href="../index-1.htm" target="_blank">Support Forum</a><a class="toolbar_btn-more toolbar_link" href="#" target="_blank">Buy Theme</a></div></div></div><div class="wgl-toolbar_wrapper"><div class="wgl-toolbar_title wgl-toolbar__bestseller-items"><span class="wgl-toolbar_title_wrapper"><span class="wgl-toolbar_title_inner">Popular</span><span class="wgl-toolbar_line"></span></span></div><div class="wgl-toolbar_container" data-item-id="26119903"><a href="../item/zikzag-consulting-agency-wordpress-theme/26119903.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-26119903"><img alt="ZikZag - Consulting & Agency WordPress Theme" src="../files/307640229/preview/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">ZikZag</span><span class="wgl-toolbar__cats">corporate</span></span><span class="wgl-toolbar__price">$59</span></div></a></div><div class="wgl-toolbar_container" data-item-id="24133743"><a href="../item/stoni-architecture-agency-wordpress-theme/24133743.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-24133743"><img alt="Stoni - Architecture Agency WordPress Theme" src="../files/313672092/preview/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">Stoni</span><span class="wgl-toolbar__cats">business</span></span><span class="wgl-toolbar__price">$59</span></div></a></div></div><div class="wgl-toolbar_wrapper"><div class="wgl-toolbar_title wgl-toolbar__new-items"><span class="wgl-toolbar_title_wrapper"><span class="wgl-toolbar_title_inner">New Themes</span><span class="wgl-toolbar_line"></span></span></div><div class="wgl-toolbar_container" data-item-id="29294609"><a href="../item/unicoach-multipurpose-upskill-wordpress-theme/29294609.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-29294609"><img alt="UniCoach - Multipurpose UpSkill WordPress Theme" src="../files/313131592/preview_19/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">UniCoach</span><span class="wgl-toolbar__cats">education</span></span><span class="wgl-toolbar__price">$19</span></div></a></div><div class="wgl-toolbar_container" data-item-id="28002563"><a href="../item/ketofitt-fitness-gym-wordpress-theme/28002563.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-28002563"><img alt="KetoFitt - Fitness & GYM WordPress Theme" src="../files/315049497/preview/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">KetoFitt</span><span class="wgl-toolbar__cats">health-beauty</span></span><span class="wgl-toolbar__price">$59</span></div></a></div><div class="wgl-toolbar_container" data-item-id="28941982"><a href="../item/bighearts-charity-donation-wordpress-theme/28941982.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-28941982"><img alt="BigHearts - Charity & Donation WordPress Theme" src="../files/313545822/preview_39/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">BigHearts</span><span class="wgl-toolbar__cats">charity</span></span><span class="wgl-toolbar__price">$39</span></div></a></div><div class="wgl-toolbar_container" data-item-id="28714368"><a href="../item/ozix-agencies-and-companies-wordpress-theme/28714368.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-28714368"><img alt="Ozix - Agencies and Companies WordPress Theme" src="../files/311786912/preview/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">Ozix</span><span class="wgl-toolbar__cats">corporate</span></span><span class="wgl-toolbar__price">$39</span></div></a></div><div class="wgl-toolbar_container" data-item-id="27456808"><a href="../item/reuss-seo-marketing-agency-wordpress-theme/27456808.html" target="_blank"><div class="wgl-toolbar_image image-preview wgl-item-27456808"><img alt="Reuss - SEO Marketing Agency WordPress Theme" src="../files/302776733/preview/01_preview.__large_preview.jpg"></div><div class="wgl-toolbar_content"><span class="wgl-toolbar__desc"><span class="wgl-toolbar__title">Reuss</span><span class="wgl-toolbar__cats">marketing</span></span><span class="wgl-toolbar__price">$59</span></div></a></div></div></div></div></aside><link rel='stylesheet' id='lp-course-wishlist-style-css' href='../wp-content/plugins/learnpress-wishlist/assets/css/wishlist.css?ver=5.5.3' type='text/css' media='all'>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/learnpress-wishlist/assets/js/wishlist.js?ver=5.5.3' id='lp-course-wishlist-script-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/jquery.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-jquery-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/react.production.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-react-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/react-dom.production.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-react-dom-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/redux.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-redux-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/redux-thunk.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-thunk-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/lodash.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-lodash-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/vendor/zoom/zoom-meeting.min.js?ver=3.6.8' id='zoom-meeting-source-js'></script>
+<script type='text/javascript' id='video-conferencing-with-zoom-api-browser-js-extra'>
+/* <![CDATA[ */
+var zvc_ajx = {"ajaxurl":"http:\/\/unicoach.wgl-demo.net\/wp-admin\/admin-ajax.php","zvc_security":"24da0d04ab","redirect_page":"http:\/\/unicoach.wgl-demo.net\/","meeting_id":"88590896251","meeting_pwd":"2547"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/video-conferencing-with-zoom-api/assets/public/js/zoom-meeting.min.js?ver=3.6.8' id='video-conferencing-with-zoom-api-browser-js'></script>
+    </body></html>
+	

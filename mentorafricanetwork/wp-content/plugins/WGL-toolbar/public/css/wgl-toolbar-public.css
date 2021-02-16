@@ -1,0 +1,270 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+@import url('../../../../../css-1.css');
+
+.elementor-editor-active .wgl-envato-toolbar {
+    display: none;
+}
+.wgl-envato-toolbar {
+    position: absolute;
+    z-index: 400;
+}
+.wgl-toolbar__container {
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 360px;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.45s ease-in-out;
+}
+.wgl-toolbar__container .wgl-toolbar_wrapper {
+    margin-bottom: 44px;
+}
+.wgl-toolbar__container .wgl-toolbar_wrapper:last-child {
+    margin-bottom: 0;
+}
+.wgl-toolbar__container .wgl-toolbar_wrapper .wgl-toolbar_container {
+    margin-bottom: 20px;
+}
+.wgl-toolbar__container .wgl-toolbar_wrapper .wgl-toolbar_container:hover img {
+    transform: translateY(-10px);
+}
+.wgl-toolbar__container .wgl-env-theme__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #232323;
+    font-family: 'Nunito Sans';
+    padding: 0;
+    margin: 0 0 14px;
+}
+.wgl-toolbar__container .wgl-env-theme__desc {
+    padding: 0;
+    margin: 0 0 30px;
+    font-size: 16px;
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+}
+.wgl-toolbar__container .wgl-env-theme__btn {
+    margin: 0 0 42px;
+}
+.wgl-toolbar__container .wgl-env-theme__btn .toolbar_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.wgl-toolbar__container .wgl-env-theme__btn .toolbar_link {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Nunito Sans';
+    border-radius: 5px;
+    background: #f3f3f3;
+    color: #232323;
+    line-height: 24px;
+    padding: 11px 0;
+    display: inline-block;
+    margin: 0 0 10px;
+    width: 100%;
+    transition: all 0.45s;
+}
+.wgl-toolbar__container .wgl-env-theme__btn .toolbar_link:last-child {
+    margin-bottom: 0;
+}
+.wgl-toolbar__container .wgl-env-theme__btn .toolbar_link:hover,
+.wgl-toolbar__container .wgl-env-theme__btn .toolbar_link.toolbar_btn-support {
+    background: #f03759;
+    color: #ffffff;
+}
+.wgl-toolbar__container .wgl-env-theme__btn .toolbar_link.toolbar_btn-support:hover {
+    background: #f3f3f3;
+    color: #232323;
+}
+
+.wgl-toolbar__container .wgl-toolbar_title {
+    margin-bottom: 14px;
+    position: relative;
+    text-align: left;
+}
+.wgl-toolbar__container .wgl-toolbar_title_wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+.wgl-toolbar__container .wgl-toolbar_title_inner {
+    font-size: 14px;
+    color: #363439;
+    border-radius: 5px;
+    line-height: 28px;
+    display: inline-block;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    padding: 0 9px;
+    margin-right: 21px;
+    font-weight: 700;
+    font-family: 'Nunito Sans';
+}
+.wgl-toolbar__container .wgl-toolbar_line {
+    display: block;
+    height: 1px;
+    background: #e5e5e5;
+    width: 100%;
+    flex: 1;
+}
+.wgl-toolbar__container .wgl-toolbar_line:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    height: 3px;
+    width: 40px;
+    background: #f03759;
+    border-radius: 1.5px;
+    right: 0;
+    top: 50%;
+    margin-top: -1.5px;
+}
+
+.wgl-toolbar__container .wgl-toolbar_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+.wgl-toolbar__container .wgl-toolbar_image {
+    padding-top: 10px;
+    transform: translateY(0);
+    transition: 0.5s;
+}
+.wgl-toolbar__container .wgl-toolbar_image img {
+    border-radius: 5px;
+    box-shadow: 5px 4px 16px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.wgl-toolbar__container .wgl-toolbar__desc .wgl-toolbar__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #363439;
+    font-family: 'Nunito Sans';
+}
+.wgl-toolbar__container .wgl-toolbar__desc .wgl-toolbar__cats {
+    font-size: 13px;
+    font-weight: 700;
+    color: #bcbcbc;
+    font-family: 'Nunito Sans';
+    text-transform: uppercase;
+}
+.wgl-toolbar__container .wgl-toolbar__price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f03759;
+    font-family: 'Nunito Sans';
+}
+.wgl-toolbar__container .wgl-toolbar__desc .wgl-toolbar__cats:before {
+    content: '/';
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.wgl-toolbar__theme-list {
+    max-height: calc(100% - 30px);
+    padding: 48px 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    transition: 0.3s ease-in;
+    scrollbar-width: none;
+}
+
+.wgl-toolbar__theme-list::-webkit-scrollbar {
+    display: none;
+}
+
+.wgl-envato-toolbar.opened .wgl-toolbar__container {
+    transform: translateX(0);
+}
+
+.wgl-envato-toolbar .wgl-toolbar__toggle-element {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: calc(50% - 230px);
+    left: -40px;
+    height: 200px;
+    max-height: 250px;
+    min-width: 40px;
+    border-radius: 0px 5px 5px 0px;
+    padding: 15px 0px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Nunito Sans';
+    line-height: 40px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    text-orientation: mixed;
+    white-space: nowrap;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    background-color: rgba(240, 55, 89, 1);
+    cursor: pointer;
+    transform: rotate(180deg);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: 0.45s ease-in-out;
+}
+.wgl-envato-toolbar .wgl-toolbar__toggle-element .wgl-env-theme-close_icon {
+    position: absolute;
+    margin-top: 34px;
+    transition: 0.45s;
+    left: 0;
+}
+.wgl-envato-toolbar.active .wgl-toolbar__toggle-element .wgl-env-theme-close_icon {
+    opacity: 0;
+    visibility: hidden;
+}
+.wgl-envato-toolbar.active .wgl-toolbar__toggle-element {
+    max-height: 54px;
+}
+.wgl-envato-toolbar .wgl-toolbar__toggle-element .laptop {
+    display: inline-block;
+    height: 24px;
+    transform: rotate(90deg) translateY(0);
+    margin-bottom: 0;
+    fill: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+}
+.wgl-envato-toolbar .wgl-toolbar__overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.wgl-envato-toolbar.opened .wgl-toolbar__overlay {
+    background: #000;
+    visibility: visible;
+    opacity: 0.4;
+}
+@media only screen and (max-width: 1200px) {
+    .wgl-envato-toolbar {
+        display: none;
+    }
+}
