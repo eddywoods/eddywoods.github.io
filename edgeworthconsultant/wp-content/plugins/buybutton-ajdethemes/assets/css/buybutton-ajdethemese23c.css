@@ -1,0 +1,87 @@
+/**
+ * Ajdethemes Plugin Styles
+ *
+ */
+
+
+@keyframes animBuyButton {
+    0% {
+      box-shadow: 0 0 0 11px rgba(122, 169, 60, 0.35), 0 0 0 22px rgba(122, 169, 60, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 0 0 rgba(122, 169, 60, 0.2), 0 0 0 0 rgba(122, 169, 60, 0.15);
+    }
+    100% {
+      box-shadow: 0 0 0 11px rgba(122, 169, 60, 0.35), 0 0 0 22px rgba(122, 169, 60, 0.15);
+    }
+}
+
+.buyButton {
+    position: fixed;
+    left: 30px;
+    bottom: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    background: #7AA93C;
+    box-shadow: 0 0 0 11px rgba(122, 169, 60, 0.35), 0 0 0 22px rgba(122, 169, 60, 0.15);
+    animation: animBuyButton 2.7s ease-in-out infinite;
+    z-index: 20;
+}
+
+.buyButton img {
+    z-index: 10;
+    transform: scale(1.1);
+}
+
+.buyButton .cta {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    left: 0;
+    top: 0;
+    padding-right: 33px;
+    width: 160px;
+    height: 45px;
+    border-radius: 100px;
+    background: #7AA93C;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0) scale(0.7);
+    transition: all 0.35s;
+}
+
+.buyButton:hover,
+.buyButton:focus {
+    animation-play-state: paused;
+
+}
+
+.buyButton:hover .cta,
+.buyButton:focus .cta {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+}
+
+@media(min-width: 576px) {
+    .buyButton {
+        display: inline-flex;
+    }
+}
+
+@media(min-width: 768px) {
+    .buyButton {
+        left: 50px;
+        bottom: 50px;
+    }
+}
+
