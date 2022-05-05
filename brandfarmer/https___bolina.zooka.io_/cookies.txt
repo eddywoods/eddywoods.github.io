@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+bolina.zooka.io	TRUE	/	FALSE	1999999999	wordpress_test_cookie	WP+Cookie+check
+bolina.zooka.io	TRUE	/	FALSE	1999999999	woocommerce_items_in_cart	1
+bolina.zooka.io	TRUE	/	FALSE	1999999999	woocommerce_cart_hash	c42324a19681166f8611449639651759
+bolina.zooka.io	TRUE	/	FALSE	1999999999	wp_woocommerce_session_e61a9c7c4e24e32a4b2c93454ae32a27	e41caeb6c07bb8e75adfd77f85969b46%7C%7C1651908558%7C%7C1651904958%7C%7C3144415ba57ddffb0e77667af6a2325d
+
